@@ -3,27 +3,42 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [project]
-name = "python-jobspy"
+name = "jobspy"
 version = "1.4.1"
-description = "JobSpy: job scraper for LinkedIn, Indeed, Glassdoor, ZipRecruiter, Bayt, Naukri, BDJobs & HelloWork"
+description = "Jobs scraper library for public job boards like LinkedIn, Indeed etc.."
 authors = [
-    { name = "Cullen Watson", email = "cullen@cullenwatson.com" },
-    { name = "Zachary Hampton", email = "zachary@zacharysproducts.com" },
+  { name = "Cullen Watson", email = "cullen@cullenwatson.com" },
+  { name = "Zachary Hampton", email = "zachary@zacharysproducts.com" },
 ]
-maintainers = [
-    { name = "Kirk Watson", email = "kirk@klwindustries.com" },
-]
+maintainers = [{ name = "Harsh Kumar", email = "harshatworkk@gmail.com" }]
 readme = "README.md"
 license = "MIT"
-keywords = ["jobs-scraper", "linkedin", "indeed", "glassdoor", "ziprecruiter", "bayt", "naukri", "bdjobs", "hellowork", "cli", "mcp", "mcp-server"]
+keywords = [
+  "jobs-scraper",
+  "linkedin",
+  "indeed",
+  "glassdoor",
+  "ziprecruiter",
+  "bayt",
+  "naukri",
+  "bdjobs",
+  "hellowork",
+  "workindia",
+  "apna",
+  "jobhai",
+  "hirist",
+  "cli",
+  "mcp",
+  "mcp-server",
+]
 requires-python = ">=3.10"
 dependencies = [
-    "requests>=2.31.0",
-    "beautifulsoup4>=4.12.2",
-    "pandas>=2.1.2",
-    "pydantic>=2.3.0",
-    "curl_cffi>=0.16.2",
-    "markdownify>=1.1.0",
+  "requests>=2.31.0",
+  "beautifulsoup4>=4.12.2",
+  "pandas>=2.1.2",
+  "pydantic>=2.3.0",
+  "curl_cffi>=0.16.2",
+  "markdownify>=1.1.0",
 ]
 dynamic = ["classifiers"]
 
@@ -43,23 +58,19 @@ Documentation = "https://github.com/speedyapply/JobSpy#readme"
 [tool.poetry]
 packages = [{ include = "jobspy" }]
 classifiers = [
-    "Development Status :: 5 - Production/Stable",
-    "Environment :: Console",
-    "Intended Audience :: Developers",
-    "Intended Audience :: End Users/Desktop",
-    "Operating System :: OS Independent",
-    "Topic :: Internet :: WWW/HTTP",
-    "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
-    "Topic :: Office/Business",
-    "Topic :: Software Development :: Libraries :: Python Modules",
+  "Development Status :: 5 - Production/Stable",
+  "Environment :: Console",
+  "Intended Audience :: Developers",
+  "Intended Audience :: End Users/Desktop",
+  "Operating System :: OS Independent",
+  "Topic :: Internet :: WWW/HTTP",
+  "Topic :: Internet :: WWW/HTTP :: Indexing/Search",
+  "Topic :: Office/Business",
+  "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 
 [dependency-groups]
-dev = [
-    "ruff==0.16.10",
-    "mypy==2.4.0",
-    "pandas-stubs==2.3.3.260113",
-]
+dev = ["ruff==0.16.10", "mypy==2.4.0", "pandas-stubs==2.3.3.260113"]
 
 [tool.ruff]
 line-length = 88

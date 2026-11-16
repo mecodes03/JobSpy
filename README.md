@@ -35,7 +35,8 @@ _Python version >= [3.10](https://www.python.org/downloads/release/python-3100/)
 from jobspy import scrape_jobs
 
 jobs = scrape_jobs(
-    site_name=["indeed", "linkedin", "zip_recruiter", "glassdoor"],  # also "bayt", "naukri", "bdjobs", "hellowork"
+    site_name=["indeed", "linkedin", "zip_recruiter", "glassdoor"],
+    # also "bayt", "naukri", "bdjobs", "hellowork", "workindia", "apna", "jobhai", "hirist"
     search_term="software engineer",
     location="San Francisco, CA",
     results_wanted=20,
@@ -96,7 +97,8 @@ jobspy "data analyst" --remote --fields title,company,job_url
 ```plaintext
 Optional
 ├── site_name (list|str): 
-|    linkedin, zip_recruiter, indeed, glassdoor, google, bayt, bdjobs, naukri, hellowork
+|    linkedin, zip_recruiter, indeed, glassdoor, google, bayt, bdjobs, naukri, hellowork,
+|    workindia, apna, jobhai, hirist
 |    (default is all)
 │
 ├── search_term (str)
@@ -214,6 +216,22 @@ Naukri searches India. `location` takes a city, e.g. `"Pune"`.
 ### HelloWork
 
 HelloWork searches France. `location` takes a French city, postcode or region, e.g. `"Lyon"`. Most jobs are posted in French, so French search terms find more.
+
+### WorkIndia
+
+WorkIndia searches India. `location` takes a city, e.g. `"Pune"`. A `search_term` returns at most 20 jobs because WorkIndia's keyword search has no working pagination.
+
+### Apna
+
+Apna searches India. `location` takes a city, e.g. `"Pune"`. Search terms use Apna's prebuilt SEO pages, so uncommon terms fall back to its general listings with a warning.
+
+### Job Hai
+
+Job Hai searches India one city at a time, e.g. `"Mumbai"`, and defaults to Delhi when `location` is omitted.
+
+### Hirist
+
+Hirist searches India and needs a `search_term`. `location` takes a city, e.g. `"Pune"`. It only searches jobs from the last 90 days.
 
 
 ## Notes

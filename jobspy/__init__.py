@@ -10,12 +10,15 @@ from typing import get_args
 import pandas as pd
 from pydantic import ValidationError
 
+from jobspy.apna import Apna
 from jobspy.bayt import Bayt
 from jobspy.bdjobs import BDJobs
 from jobspy.glassdoor import Glassdoor
 from jobspy.google import Google
 from jobspy.hellowork import HelloWork
+from jobspy.hirist import Hirist
 from jobspy.indeed import Indeed
+from jobspy.jobhai import JobHai
 from jobspy.linkedin import LinkedIn
 from jobspy.model import (
     Country,
@@ -30,6 +33,7 @@ from jobspy.naukri import Naukri
 from jobspy.util import (
     configure_logging,
 )
+from jobspy.workindia import WorkIndia
 from jobspy.ziprecruiter import ZipRecruiter
 
 __all__ = ["scrape_jobs"]
@@ -44,6 +48,10 @@ SCRAPER_MAPPING: dict[Site, type[Scraper]] = {
     Site.NAUKRI: Naukri,
     Site.BDJOBS: BDJobs,
     Site.HELLOWORK: HelloWork,
+    Site.WORKINDIA: WorkIndia,
+    Site.APNA: Apna,
+    Site.JOBHAI: JobHai,
+    Site.HIRIST: Hirist,
 }
 
 column_types = {

@@ -13,7 +13,10 @@ PREVIEW = (
     " currency interval job_url"
 ).split()
 DEFAULT_SITES = ["indeed", "linkedin", "zip_recruiter", "glassdoor"]
-REGIONAL = "bayt (Middle East), naukri (India), bdjobs (Bangladesh), hellowork (France)"
+REGIONAL = (
+    "bayt (Middle East), naukri (India), bdjobs (Bangladesh), hellowork (France), "
+    "workindia, apna, jobhai and hirist (India)"
+)
 FORMATS = (".csv", ".json", ".jsonl")
 
 
