@@ -3,7 +3,7 @@ requires = ["poetry-core>=2.0.0,<3.0.0"]
 build-backend = "poetry.core.masonry.api"
 
 [project]
-name = "jobspy"
+name = "jobspy-py"
 version = "1.4.1"
 description = "Jobs scraper library for public job boards like LinkedIn, Indeed etc.."
 authors = [
